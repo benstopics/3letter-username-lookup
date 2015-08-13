@@ -1,0 +1,13 @@
+Returns all available 3-letter usernames for websites of the http://username.website.com/ or http://website.com/username format. 
+
+First argument is always homepage url. Do not include a "http://" prefix or a "/" suffix; simply use a "website.com" format. Also, website does not have to be a *.com domain.
+
+Other arguments include "b", "a", "u", and "h". The "b" flag stands for "before" (http://username.website.com/) and "a" flag stands for "after" (http://website.com/username). The "u" flag enables underscores as a possible character in the username, and "h" enables hyphens.
+
+When all possible 3-letter usernames have been accounted for, the list of detected available usernames is saved to a text file.
+
+Practical example commands:
+lookup.py deviantart.com b h t8
+lookup.py twitter.com a u t t16
+
+Python 3.4.3
