@@ -51,7 +51,6 @@ if underscores:
 	chars += '_'
 if hyphens:
 	chars += '-'
-print chars
 
 if format != 'b' and format != 'a':
 	print 'No format specified.'

@@ -10,6 +10,5 @@ When all possible 3-letter usernames have been accounted for, the list of detect
 
 Practical example commands:
 lookup.py deviantart.com b h t8
-lookup.py twitter.com a u t t16
 
 Python 3.4.3
