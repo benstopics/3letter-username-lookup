@@ -2,7 +2,9 @@ Returns all available 3-letter usernames for websites of the http://username.web
 
 First argument is always homepage url. Do not include a "http://" prefix or a "/" suffix; simply use a "website.com" format. Also, website does not have to be a *.com domain.
 
-Other arguments include "b", "a", "u", and "h". The "b" flag stands for "before" (http://username.website.com/) and "a" flag stands for "after" (http://website.com/username). The "u" flag enables underscores as a possible character in the username, and "h" enables hyphens.
+Other mandatory arguments include "b" and "a". The "b" flag stands for "before" (http://username.website.com/) and "a" flag stands for "after" (http://website.com/username).
+
+Other optional arguments include "u", "h", and "t#". The "u" flag enables underscores as a possible character in the username, and "h" enables hyphens. The "t#" flag specifies the number of threads. If not specified, "t2" is assumed.
 
 When all possible 3-letter usernames have been accounted for, the list of detected available usernames is saved to a text file.
 
