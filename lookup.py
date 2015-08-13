@@ -8,7 +8,6 @@ import time
 # Multithreading framework based off of  http://stackoverflow.com/questions/16199793/python-3-3-simple-threading-event-example
 
 # Debug arguments
-sys.argv = [0,'deviantart.com','b','h','t16']
 
 def get_cur_millis():
 	return time.time() * 1000
@@ -25,8 +24,6 @@ last_time = get_cur_millis()
 	
 alphabet = string.lowercase
 digits = '1234567890'
-underscores = ''
-hyphens = ''
 chars = alphabet + digits
 
 if len(sys.argv) < 2:
@@ -37,18 +34,24 @@ homepage = sys.argv[1]
 format = ''
 num_threads = 2
 
+underscores = False
+hyphens = False
 for i in range(2, len(sys.argv)):
 	arg = sys.argv[i]
 	if arg == 'b' or arg == 'a':
 		format = arg
 	elif arg == 'u':
-		understores = '_'
+		underscores = True
 	elif arg == 'h':
-		hyphens = '-'
+		hyphens = True
 	elif arg.startswith('t'):
 		num_threads = int(arg[1:])
-		
-chars += underscores + hyphens
+
+if underscores:
+	chars += '_'
+if hyphens:
+	chars += '-'
+print chars
 
 if format != 'b' and format != 'a':
 	print 'No format specified.'
